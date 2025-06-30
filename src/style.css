@@ -1,9 +1,16 @@
+@import "tailwindcss";
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-link {
+  @apply text-lg text-gray-800 transition-transform duration-100 hover:font-medium hover:text-blue-500;
+}
+
+.nav-link-active {
+  @apply font-medium text-blue-500;
 }
