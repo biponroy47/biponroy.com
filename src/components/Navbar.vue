@@ -14,7 +14,9 @@ const navLinks = [
 </script>
 
 <template>
-  <nav class="w-full bg-white p-5 shadow-lg">
+  <nav
+    class="fixed top-0 left-0 z-100 w-full border-b border-white/20 bg-white/80 p-5 shadow-lg/25 backdrop-blur-lg"
+  >
     <div class="flex flex-col lg:flex-row lg:items-center">
       <div class="flex items-center justify-between">
         <div
@@ -64,3 +66,12 @@ const navLinks = [
     </div>
   </nav>
 </template>
+
+<style lang="css" scoped>
+.name-font {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+</style>

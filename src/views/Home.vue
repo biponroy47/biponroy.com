@@ -1,3 +1,7 @@
 <template>
-  <h1>Home Page</h1>
+  <Gradient />
 </template>
+
+<script setup>
+import Gradient from "../components/Gradient.vue";
+</script>
