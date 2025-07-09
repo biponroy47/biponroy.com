@@ -1,6 +1,6 @@
 <template>
   <div class="relative h-screen w-screen overflow-hidden">
-    <div class="animate-gradient absolute inset-0 z-0 bg-gradient-to-t"></div>
+    <div class="animate-gradient absolute inset-0"></div>
     <div id="tsparticles" class="absolute inset-0 z-10"></div>
   </div>
 </template>
@@ -32,35 +32,40 @@ export default {
 <style scoped>
 @keyframes gradient-flow {
   0% {
-    background-position: 50% 0%;
+    background-position: 0% 0%;
   }
   100% {
-    background-position: 50% 200%;
+    background-position: 0% 100%;
   }
 }
 
 .animate-gradient {
+  background-image: -webkit-linear-gradient(
+    to top,
+    #148fff,
+    #29adff,
+    #3dcaff,
+    #52e7ff,
+    #60efff,
+    #52e7ff,
+    #3dcaff,
+    #29adff,
+    #148fff
+  );
   background-image: linear-gradient(
     to top,
-    #e0f2fe,
-    /* sky-100 */ #cfeafe,
-    #bfe2fd,
-    #aeddfe,
-    #9dd5fc,
-    #88cdfb,
-    #53c0f9,
-    #38bdf8,
-    /* sky-400 */ #38bdf8,
-    #53c0f9,
-    #88cdfb,
-    #9dd5fc,
-    #aeddfe,
-    #bfe2fd,
-    #cfeafe,
-    #e0f2fe /* sky-100 again */
+    #148fff,
+    #29adff,
+    #3dcaff,
+    #52e7ff,
+    #60efff,
+    #52e7ff,
+    #3dcaff,
+    #29adff,
+    #148fff
   );
   background-size: 100% 300%;
   background-repeat: repeat;
-  animation: gradient-flow 12s linear infinite;
+  animation: gradient-flow 8s linear infinite;
 }
 </style>
