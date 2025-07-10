@@ -1,71 +1,43 @@
 <template>
   <div class="relative h-screen w-screen overflow-hidden">
-    <div class="animate-gradient absolute inset-0"></div>
-    <div id="tsparticles" class="absolute inset-0 z-10"></div>
+    <!-- Sliding track with 4 panels (2 original + 2 copies) -->
+    <div class="animate-slide-track flex h-full w-[800vw]">
+      <!-- First set -->
+      <div class="flex w-[400vw]">
+        <div
+          class="h-full w-[200vw] bg-gradient-to-l from-cyan-400 from-10% via-blue-400 via-50% to-indigo-400 to-100%"
+        ></div>
+        <div
+          class="h-full w-[200vw] bg-gradient-to-l from-indigo-400 from-0% via-blue-400 via-50% to-cyan-400 to-90%"
+        ></div>
+      </div>
+
+      <!-- Second set (copies or variations) -->
+      <div class="flex w-[400vw]">
+        <div
+          class="h-full w-[200vw] bg-gradient-to-l from-cyan-400 from-10% via-blue-400 via-50% to-indigo-400 to-100%"
+        ></div>
+        <div
+          class="h-full w-[200vw] bg-gradient-to-l from-indigo-400 from-0% via-blue-400 via-50% to-cyan-400 to-90%"
+        ></div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-import { tsParticles } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
-
-export default {
-  name: "FullScreenGradient",
-  async mounted() {
-    await loadFull(tsParticles);
-    await tsParticles.load("tsparticles", {
-      fullScreen: { enable: false },
-      background: { color: "transparent" },
-      particles: {
-        number: { value: 60 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1 },
-        opacity: { value: 0.5 },
-        color: { value: "#ffffff" },
-        links: { enable: true, color: "#ffffff", distance: 100 },
-      },
-    });
-  },
-};
-</script>
-
 <style scoped>
-@keyframes gradient-flow {
-  0% {
-    background-position: 0% 0%;
+@layer utilities {
+  @keyframes slide-track {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-400vw);
+    }
   }
-  100% {
-    background-position: 0% 100%;
-  }
-}
 
-.animate-gradient {
-  background-image: -webkit-linear-gradient(
-    to top,
-    #148fff,
-    #29adff,
-    #3dcaff,
-    #52e7ff,
-    #60efff,
-    #52e7ff,
-    #3dcaff,
-    #29adff,
-    #148fff
-  );
-  background-image: linear-gradient(
-    to top,
-    #148fff,
-    #29adff,
-    #3dcaff,
-    #52e7ff,
-    #60efff,
-    #52e7ff,
-    #3dcaff,
-    #29adff,
-    #148fff
-  );
-  background-size: 100% 300%;
-  background-repeat: repeat;
-  animation: gradient-flow 8s linear infinite;
+  .animate-slide-track {
+    animation: slide-track 4s linear infinite;
+  }
 }
 </style>
