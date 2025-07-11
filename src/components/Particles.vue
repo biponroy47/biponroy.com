@@ -1,7 +1,7 @@
 <template>
   <div class="absolute h-full w-full overflow-hidden">
     <div
-      v-for="i in 50"
+      v-for="i in 25"
       :key="i"
       class="circle-container"
       :style="getCircleStyle(i)"
@@ -18,7 +18,7 @@ export default {
     getCircleStyle(i) {
       const left = Math.random() * 100;
       const top = Math.random() * 100; // Random vertical position
-      const delay = i * 3;
+      const delay = i * 10;
       const duration = 5 + Math.random() * 10;
       const size = 5 + Math.random() * 1;
 
