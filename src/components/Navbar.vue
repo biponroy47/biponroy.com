@@ -15,7 +15,7 @@ const navLinks = [
 
 <template>
   <nav
-    class="fixed top-0 left-0 z-100 w-full border-b border-white/20 bg-white/80 p-5 shadow-lg/25 backdrop-blur-lg"
+    class="fixed top-0 left-0 z-100 w-full border-b border-white/20 bg-white/90 p-5 shadow-md/30 backdrop-blur-md"
   >
     <div class="flex flex-col lg:flex-row lg:items-center">
       <div class="flex items-center justify-between">
@@ -49,7 +49,7 @@ const navLinks = [
             v-for="(link, index) in navLinks"
             :key="link.to"
             :to="link.to"
-            class="transform rounded-sm p-3 text-lg font-medium text-gray-700 transition-all duration-750 hover:bg-gray-500 hover:text-white lg:translate-y-0 lg:opacity-100 lg:hover:delay-0 lg:hover:duration-100"
+            class="transform rounded-sm p-3 text-lg font-medium text-gray-700 transition-all duration-500 hover:bg-gray-500 hover:text-white lg:translate-y-0 lg:opacity-100 lg:hover:delay-0 lg:hover:duration-100"
             :class="
               menuOpen
                 ? `translate-y-0 opacity-100 delay-${link.delay}`

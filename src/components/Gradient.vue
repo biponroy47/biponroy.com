@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-screen w-screen overflow-hidden">
+  <div class="absolute h-screen w-screen overflow-hidden">
     <!-- Sliding track with 4 panels (2 original + 2 copies) -->
     <div class="animate-slide-track flex h-full w-[800vw]">
       <!-- First set -->
@@ -37,7 +37,7 @@
   }
 
   .animate-slide-track {
-    animation: slide-track 4s linear infinite;
+    animation: slide-track 8s linear infinite;
   }
 }
 </style>
