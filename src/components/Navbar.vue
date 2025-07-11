@@ -15,7 +15,7 @@ const navLinks = [
 
 <template>
   <nav
-    class="fixed top-0 left-0 z-100 w-full border-b border-white/20 bg-white/90 p-5 shadow-md/30 backdrop-blur-md"
+    class="fixed top-0 left-0 z-100 w-full border-b border-white/100 bg-white/90 p-5 shadow-xl backdrop-blur-md"
   >
     <div class="flex flex-col lg:flex-row lg:items-center">
       <div class="flex items-center justify-between">

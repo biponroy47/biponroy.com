@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute h-full w-full overflow-hidden">
+  <div class="absolute z-10 h-full w-full overflow-hidden">
     <div
       v-for="i in 25"
       :key="i"
@@ -18,7 +18,7 @@ export default {
     getCircleStyle(i) {
       const left = Math.random() * 100;
       const top = Math.random() * 100; // Random vertical position
-      const delay = i * 10;
+      const delay = i * 50;
       const duration = 5 + Math.random() * 10;
       const size = 5 + Math.random() * 1;
 
@@ -45,10 +45,10 @@ export default {
   .circle {
     width: var(--circle-size, 10px);
     height: var(--circle-size, 10px);
-    border-radius: 50%;
+    border-radius: 100%;
     filter: blur(0.5px);
-    background: rgba(255, 255, 255, 0.6);
-    animation: float var(--float-duration, 10s) infinite ease-in-out;
+    background: rgba(255, 255, 255);
+    animation: float var(--float-duration, 5s) infinite ease-in-out;
     position: absolute;
     transform: translateX(-50%);
   }
@@ -59,11 +59,32 @@ export default {
     transform: translateX(-50%) translateY(0);
     opacity: 0;
   }
-  25% {
+  10% {
+    opacity: 0.25;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
     opacity: 0.5;
   }
   50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  70% {
     opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.25;
   }
   100% {
     transform: translateX(-50%) translateY(-100vh);
