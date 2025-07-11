@@ -2,7 +2,7 @@
   <div class="relative min-h-screen">
     <!-- Floating Container -->
     <div
-      class="absolute top-1/4 left-1/2 z-50 w-full max-w-4xl -translate-x-1/2 transform rounded-lg bg-white p-8 shadow-2xl"
+      class="absolute top-1/6 left-1/2 z-50 max-h-[95vh] w-[80vw] max-w-4xl -translate-x-1/2 transform rounded-lg bg-white p-10 shadow-2xl lg:top-1/4 lg:max-h-[65vh]"
     >
       <!-- Header Row -->
       <div class="mb-8 flex justify-center">
@@ -13,14 +13,14 @@
 
       <!-- Content Row -->
       <div
-        class="flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-center"
+        class="flex flex-col items-center justify-center gap-15 lg:flex-row lg:items-center"
       >
         <!-- Left Column: Image -->
         <div class="flex justify-center">
           <img
             src="../assets/profile.JPG"
             alt="Profile"
-            class="h-48 w-48 rounded-full object-cover shadow-md"
+            class="h-60 w-60 rounded-full object-cover shadow-md"
           />
         </div>
 
