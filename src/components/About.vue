@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute h-full w-full overflow-hidden">
+  <div class="absolute inset-0 z-0 overflow-hidden shadow-lg">
     <!-- GRADIENT -->
     <div class="animate-slide-track flex h-full w-[800vw] flex-row">
       <div
@@ -19,7 +19,7 @@
       <div
         v-for="i in 25"
         :key="i"
-        class="circle-container flex max-w-[100vw] flex-row lg:max-w-[100vw]"
+        class="circle-container z-10 flex max-w-[100vw] flex-row lg:max-w-[100vw]"
         :style="getCircleStyle(i)"
       >
         <div class="circle"></div>
@@ -28,7 +28,7 @@
 
     <!-- ABOUT PANEL -->
     <div
-      class="absolute top-30 left-1/2 z-50 flex h-[80vh] w-[85vw] -translate-x-1/2 transform flex-col items-center justify-center rounded-lg bg-white shadow-2xl lg:top-50 lg:h-[65vh] lg:w-[65vw]"
+      class="absolute top-30 left-1/2 z-20 flex h-[80vh] w-[85vw] -translate-x-1/2 transform flex-col items-center justify-center rounded-lg bg-white shadow-2xl lg:top-50 lg:h-[65vh] lg:w-[65vw]"
     >
       <h1
         class="m-10 my-5 flex w-full flex-row justify-center bg-clip-text text-center text-5xl font-bold whitespace-nowrap lg:mt-10 lg:text-7xl"
@@ -41,7 +41,7 @@
         <img
           src="../assets/profile.JPG"
           alt="Profile"
-          class="mb-10 h-50 w-50 rounded-full object-cover shadow-md lg:mr-5 lg:mb-20 lg:ml-10 lg:h-60 lg:w-60"
+          class="mb-10 h-50 w-50 rounded-full object-cover shadow-xl lg:mr-5 lg:mb-20 lg:ml-10 lg:h-60 lg:w-60"
         />
         <p
           class="text-md mx-10 mb-10 text-center leading-relaxed text-gray-800 lg:mr-20 lg:ml-5 lg:w-95 lg:text-xl"
