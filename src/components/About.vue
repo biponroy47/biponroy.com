@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute inset-0 z-0 overflow-hidden shadow-lg">
+  <div class="absolute inset-0 z-0 overflow-hidden shadow-xl">
     <!-- GRADIENT -->
     <div class="animate-slide-track flex h-full w-[800vw] flex-row">
       <div
@@ -28,10 +28,10 @@
 
     <!-- ABOUT PANEL -->
     <div
-      class="absolute top-30 left-1/2 z-20 flex h-[80vh] w-[85vw] -translate-x-1/2 transform flex-col items-center justify-center rounded-lg bg-white shadow-2xl lg:top-50 lg:h-[65vh] lg:w-[65vw]"
+      class="absolute top-30 left-1/2 z-20 flex h-[80vh] w-[85vw] -translate-x-1/2 transform flex-col items-center justify-center lg:top-40 lg:h-[65vh] lg:w-[65vw]"
     >
       <h1
-        class="m-10 my-5 flex w-full flex-row justify-center bg-clip-text text-center text-5xl font-bold whitespace-nowrap lg:mt-10 lg:text-7xl"
+        class="m-10 mb-10 flex w-full flex-row justify-center bg-clip-text text-center text-5xl font-bold whitespace-nowrap text-white lg:mt-10 lg:mb-20 lg:text-7xl"
       >
         Bipon Roy
       </h1>
@@ -41,10 +41,10 @@
         <img
           src="../assets/profile.JPG"
           alt="Profile"
-          class="mb-10 h-50 w-50 rounded-full object-cover shadow-xl lg:mr-5 lg:mb-20 lg:ml-10 lg:h-60 lg:w-60"
+          class="mb-5 h-[50vw] w-[50vw] rounded-lg object-cover shadow-xl lg:mr-5 lg:mb-0 lg:ml-5 lg:h-80 lg:w-80"
         />
         <p
-          class="text-md mx-10 mb-10 text-center leading-relaxed text-gray-800 lg:mr-20 lg:ml-5 lg:w-95 lg:text-xl"
+          class="text-md lg-h-100 mx-10 mb-10 w-[80vw] rounded-lg bg-white p-6 text-center leading-relaxed text-gray-800 shadow-2xl lg:mr-10 lg:mb-0 lg:ml-5 lg:w-120 lg:text-xl"
         >
           Hey, I’m Bipon! I’m a 4th year Computer Science student at Western
           University and currently a Software Engineer Intern at Ontario Power
@@ -71,7 +71,7 @@
   }
 
   .animate-slide-track {
-    animation: slide-track 8s linear infinite;
+    animation: slide-track 5s linear infinite;
   }
 }
 </style>
