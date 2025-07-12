@@ -31,7 +31,7 @@
       class="absolute top-30 left-1/2 z-20 flex h-[80vh] w-[85vw] -translate-x-1/2 transform flex-col items-center justify-center lg:top-40 lg:h-[65vh] lg:w-[65vw]"
     >
       <h1
-        class="m-10 mb-10 flex w-full flex-row justify-center bg-clip-text text-center text-5xl font-bold whitespace-nowrap text-white lg:mt-10 lg:mb-20 lg:text-7xl"
+        class="m-10 flex w-full flex-row justify-center bg-clip-text text-center text-5xl font-bold whitespace-nowrap text-white lg:mt-10 lg:mb-20 lg:text-7xl"
       >
         Bipon Roy
       </h1>
@@ -41,7 +41,7 @@
         <img
           src="../assets/profile.JPG"
           alt="Profile"
-          class="mb-5 h-[50vw] w-[50vw] rounded-lg object-cover shadow-xl lg:mr-5 lg:mb-0 lg:ml-5 lg:h-80 lg:w-80"
+          class="mb-5 h-[50vw] w-[50vw] rounded-lg object-cover shadow-xl lg:mr-5 lg:mb-0 lg:ml-10 lg:h-80 lg:w-80"
         />
         <p
           class="text-md lg-h-100 mx-10 mb-10 w-[80vw] rounded-lg bg-white p-6 text-center leading-relaxed text-gray-800 shadow-2xl lg:mr-10 lg:mb-0 lg:ml-5 lg:w-120 lg:text-xl"
