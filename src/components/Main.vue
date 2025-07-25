@@ -32,19 +32,15 @@
       </h1>
     </div>
     <div
-      class="absolute top-[60vh] left-1/2 z-20 flex w-full -translate-x-1/2 transform flex-col items-center justify-center"
+      class="absolute top-[60vh] left-1/2 z-20 flex w-[50vw] -translate-x-1/2 transform flex-col items-center justify-center gap-y-5 lg:w-full"
     >
       <h1
-        class="roboto-condensed flex flex-row justify-center bg-clip-text text-center text-3xl text-white text-shadow-lg lg:w-full lg:text-4xl"
+        class="roboto-condensed thin flex flex-row justify-center bg-clip-text text-center text-3xl text-wrap text-white text-shadow-lg lg:w-full lg:text-4xl"
       >
         SOFTWARE ENGINEER
       </h1>
-    </div>
-    <div
-      class="absolute top-[70vh] left-1/2 z-20 flex w-full -translate-x-1/2 transform flex-col items-center justify-center"
-    >
       <h1
-        class="roboto-condensed flex flex-row justify-center bg-clip-text text-center text-2xl text-white text-shadow-lg lg:w-full lg:text-3xl"
+        class="roboto-condensed thin flex flex-row justify-center bg-clip-text text-center text-2xl text-wrap text-white text-shadow-lg lg:w-full lg:text-3xl"
       >
         FULL STACK DEVELOPER
       </h1>

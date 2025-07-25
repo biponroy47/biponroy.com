@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="relative h-[100vh] w-full">
-      <About />
-    </div>
     <Main />
-    <Sites />
+
+    <About class="mt-[100vh]" />
+
+    <Sites class="mt-[100vh]" />
   </div>
 </template>
 
