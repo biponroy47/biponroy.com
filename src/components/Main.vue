@@ -2,10 +2,11 @@
   <div class="absolute inset-0 z-0 overflow-hidden shadow-xl">
     <!-- GRADIENT -->
     <div class="flex h-full w-full flex-row">
+      <!-- BACKGROUND IMAGE -->
       <img
         src="../assets/background.png"
         alt=""
-        class="absolute inset-0 z-0 h-full w-full object-cover"
+        class="absolute inset-0 z-0 h-screen w-full object-cover"
         style="position: absolute; left: 0; top: 0"
       />
 
@@ -22,33 +23,31 @@
 
     <!-- ABOUT PANEL -->
     <div
-      class="absolute top-30 left-1/2 z-20 flex h-[80vh] w-[85vw] -translate-x-1/2 transform flex-col items-center justify-center lg:top-40 lg:h-[65vh] lg:w-[65vw]"
+      class="absolute top-[25vh] left-1/2 z-20 flex w-full -translate-x-1/2 transform flex-col items-center justify-center"
     >
       <h1
-        class="m-10 flex w-full flex-row justify-center bg-clip-text text-center text-5xl font-bold whitespace-nowrap text-white lg:mt-10 lg:mb-20 lg:text-7xl"
+        class="roboto-condensed m-10 flex w-0.75 flex-row justify-center bg-clip-text text-center text-8xl text-white text-shadow-lg lg:mt-10 lg:mb-20 lg:w-full lg:text-9xl"
       >
-        Bipon Roy
+        BIPON ROY
       </h1>
-      <div
-        class="flex h-full w-full flex-col items-center justify-center lg:flex-row lg:items-center lg:justify-center"
+    </div>
+    <div
+      class="absolute top-[60vh] left-1/2 z-20 flex w-full -translate-x-1/2 transform flex-col items-center justify-center"
+    >
+      <h1
+        class="roboto-condensed flex flex-row justify-center bg-clip-text text-center text-3xl text-white text-shadow-lg lg:w-full lg:text-4xl"
       >
-        <img
-          src="../assets/profile.JPG"
-          alt="Profile"
-          class="mb-5 h-[50vw] w-[50vw] rounded-lg object-cover shadow-xl lg:mr-5 lg:mb-0 lg:ml-10 lg:h-80 lg:w-80"
-        />
-        <p
-          class="text-md lg-h-100 mx-10 mb-10 w-[80vw] rounded-lg bg-white p-6 text-center leading-relaxed text-gray-800 shadow-2xl lg:mr-10 lg:mb-0 lg:ml-5 lg:w-120 lg:text-xl"
-        >
-          Hey, I’m Bipon! I’m a 4th year Computer Science student at Western
-          University and currently a Software Engineer Intern at Ontario Power
-          Generation. I’m passionate about AI, ML, and all things related to
-          tech.
-          <br /><br />
-          Hobby-wise, I love playing tennis, the guitar, biking, and several
-          more. Check out my websites below if you're curious!
-        </p>
-      </div>
+        SOFTWARE ENGINEER
+      </h1>
+    </div>
+    <div
+      class="absolute top-[70vh] left-1/2 z-20 flex w-full -translate-x-1/2 transform flex-col items-center justify-center"
+    >
+      <h1
+        class="roboto-condensed flex flex-row justify-center bg-clip-text text-center text-2xl text-white text-shadow-lg lg:w-full lg:text-3xl"
+      >
+        FULL STACK DEVELOPER
+      </h1>
     </div>
   </div>
 </template>
