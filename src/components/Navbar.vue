@@ -30,8 +30,8 @@ onUnmounted(() => {
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 z-100 w-[100vw] px-6 py-4 shadow-2xl transition-colors duration-500',
-      scrolled ? 'bg-black/100' : 'bg-transparent',
+      'fixed top-0 left-0 z-100 w-[100vw] px-6 py-4 shadow-[0_4px_32px_8px_rgba(0,0,0,0.75)] backdrop-blur-lg transition-colors duration-500',
+      scrolled ? 'bg-black/100' : '',
     ]"
   >
     <div class="flex flex-col lg:flex-row lg:items-center">
