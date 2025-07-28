@@ -30,8 +30,10 @@ onUnmounted(() => {
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 z-100 w-[100vw] px-6 py-4 shadow-[0_4px_32px_8px_rgba(0,0,0,0.75)] backdrop-blur-lg transition-colors duration-500',
-      scrolled ? 'bg-black/100' : '',
+      'fixed top-0 left-0 z-100 w-[100vw] px-6 py-4 backdrop-blur-2xl transition-all duration-500 ease-in-out',
+      scrolled
+        ? 'bg-tiber/95 shadow-[0_1px_16px_1px_rgba(0,0,0,0.75)]'
+        : 'shadow-[0_8px_32px_4px_rgba(0,0,0,0.75)]',
     ]"
   >
     <div class="flex flex-col lg:flex-row lg:items-center">
@@ -66,7 +68,7 @@ onUnmounted(() => {
             v-for="(link, index) in navLinks"
             :key="link.to"
             :to="link.to"
-            class="roboto-condensed my-5 inline-block transform rounded-sm bg-transparent text-lg font-medium text-white transition-all duration-200 hover:scale-115 lg:my-0 lg:mt-0 lg:p-2"
+            class="roboto-condensed my-5 inline-block transform rounded-sm bg-transparent text-lg font-medium text-white transition-all duration-200 hover:scale-110 lg:my-0 lg:mt-0 lg:p-2"
             @click="closeMenu"
           >
             {{ link.name }}

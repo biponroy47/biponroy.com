@@ -23,7 +23,7 @@
 
     <!-- ABOUT PANEL -->
     <div
-      class="absolute top-[25vh] left-1/2 z-20 flex w-full -translate-x-1/2 transform flex-col items-center justify-center"
+      class="absolute top-[20vh] left-1/2 z-20 flex w-full -translate-x-1/2 transform flex-col items-center justify-center"
     >
       <h1
         class="roboto-condensed m-10 flex w-0.75 flex-row justify-center bg-clip-text text-center text-8xl text-white text-shadow-lg lg:mt-10 lg:mb-20 lg:w-full lg:text-9xl"
@@ -32,7 +32,7 @@
       </h1>
     </div>
     <div
-      class="absolute top-[60vh] left-1/2 z-20 flex w-[50vw] -translate-x-1/2 transform flex-col items-center justify-center gap-y-5 lg:w-full"
+      class="absolute top-[55vh] left-1/2 z-20 flex w-[50vw] -translate-x-1/2 transform flex-col items-center justify-center gap-y-10 lg:w-full"
     >
       <h1
         class="roboto-condensed thin flex flex-row justify-center bg-clip-text text-center text-3xl text-wrap text-white text-shadow-lg lg:w-full lg:text-4xl"
@@ -44,6 +44,12 @@
       >
         FULL STACK DEVELOPER
       </h1>
+      <button
+        class="roboto-condensed thick text-tiber z-10 flex cursor-pointer flex-row justify-center rounded-lg bg-white px-4 py-3 text-xl font-semibold shadow-lg transition hover:scale-105"
+        @click="scrollPastHero"
+      >
+        ABOUT ME
+      </button>
     </div>
   </div>
 </template>
@@ -84,6 +90,12 @@ export default {
         "--circle-size": `${size}px`,
         "--float-duration": `${duration}s`,
       };
+    },
+    scrollPastHero() {
+      window.scrollTo({
+        top: window.innerHeight + 1,
+        behavior: "smooth",
+      });
     },
   },
 };

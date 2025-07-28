@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-tiber: #051b26;
+}
+
 /* <weight>: Use a value from 100 to 900 */
 .noto-sans {
   font-family: "Noto Sans", sans-serif;
@@ -25,4 +29,8 @@
 
 .thin {
   font-weight: 400;
+}
+
+.thick {
+  font-weight: 600;
 }
