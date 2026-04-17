@@ -92,10 +92,10 @@ export default {
       };
     },
     scrollPastHero() {
-      window.scrollTo({
-        top: window.innerHeight + 1,
-        behavior: "smooth",
-      });
+      const el = document.getElementById("about");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
     },
   },
 };

@@ -1,15 +1,27 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 const menuOpen = ref(false);
-function closeMenu() {
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function scrollTo(id: string) {
   menuOpen.value = false;
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 const navLinks = [
-  { name: "SOFTWARE", to: "/Software" },
-  { name: "PHOTOGRAPHY", to: "/Photography" },
-  { name: "ARTICLES", to: "/Articles" },
+  { name: "ABOUT ME", id: "about" },
+  { name: "EXPERIENCE", id: "experience" },
+  { name: "SOFTWARE", id: "software" },
+  { name: "PHOTOGRAPHY", id: "photography" },
+  { name: "FILMMAKING", id: "filmmaking" },
+  { name: "BLOG", id: "blog" },
 ];
 
 // Track scroll position
@@ -39,9 +51,10 @@ onUnmounted(() => {
     <div class="flex flex-col lg:flex-row lg:items-center">
       <div class="flex items-center justify-between">
         <div
-          class="roboto-condensed transform text-4xl text-white transition-transform duration-200 hover:scale-110"
+          class="roboto-condensed transform cursor-pointer text-4xl text-white transition-transform duration-200 hover:scale-110"
+          @click="scrollToTop"
         >
-          <router-link to="/">BIPON</router-link>
+          BIPON
         </div>
         <button
           class="lg:hidden"
@@ -64,15 +77,15 @@ onUnmounted(() => {
             menuOpen ? 'mt-5 max-h-screen' : 'max-h-0 lg:max-h-full',
           ]"
         >
-          <router-link
-            v-for="(link, index) in navLinks"
-            :key="link.to"
-            :to="link.to"
-            class="roboto-condensed my-5 inline-block transform rounded-sm bg-transparent text-lg font-medium text-white transition-all duration-200 hover:scale-110 lg:my-0 lg:mt-0 lg:p-2"
-            @click="closeMenu"
+          <a
+            v-for="link in navLinks"
+            :key="link.id"
+            href="javascript:void(0)"
+            class="roboto-condensed my-5 inline-block transform cursor-pointer rounded-sm bg-transparent text-lg font-medium text-white transition-all duration-200 hover:scale-110 lg:my-0 lg:mt-0 lg:p-2"
+            @click="scrollTo(link.id)"
           >
             {{ link.name }}
-          </router-link>
+          </a>
         </div>
       </div>
     </div>

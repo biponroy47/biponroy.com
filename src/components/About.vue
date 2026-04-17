@@ -81,7 +81,7 @@ onUnmounted(() => {
 
 <template>
   <!-- ABOUT PANEL -->
-  <div>
+  <div class="mx-auto max-w-5xl px-6">
     <h1
       ref="h1Ref"
       :class="[
@@ -96,7 +96,7 @@ onUnmounted(() => {
     >
       <img
         ref="imgRef"
-        src="../assets/profile.JPG"
+        src="../assets/profile2.JPG"
         alt="Profile"
         :class="[
           'mb-5 h-[40vw] w-[40vw] rounded-lg object-cover shadow-xl transition-all delay-300 duration-1000 ease-out lg:mr-5 lg:mb-0 lg:ml-10 lg:h-80 lg:w-80',
