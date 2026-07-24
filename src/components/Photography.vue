@@ -117,12 +117,24 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="px-4">
+  <section class="bg-[#f7f8f5] px-4 py-24">
+    <p
+      class="roboto-condensed thick text-center text-sm tracking-[0.18em] text-teal-700 uppercase"
+    >
+      Visual archive
+    </p>
     <h1
-      class="roboto-condensed thick flex w-full flex-row justify-center pt-30 pb-10 text-center text-5xl font-bold text-gray-800 lg:text-7xl"
+      class="roboto-condensed thick flex w-full flex-row justify-center pt-3 pb-5 text-center text-5xl font-bold text-slate-950 lg:text-7xl"
     >
       PHOTOGRAPHY
     </h1>
+    <p
+      class="mx-auto mb-12 max-w-3xl text-center text-lg leading-8 text-slate-600"
+    >
+      Photography was one of my first creative outlets. It trained the same
+      instincts I use in software: patience, iteration, attention to detail, and
+      knowing when something finally feels right.
+    </p>
     <div
       ref="gridRef"
       :class="[
@@ -134,7 +146,7 @@ onUnmounted(() => {
         v-for="(photo, index) in photos"
         :key="photo.src"
         type="button"
-        class="group relative cursor-pointer overflow-hidden shadow-[0_8px_18px_rgba(5,27,38,0.16)] focus:outline-none"
+        class="group relative cursor-pointer overflow-hidden rounded-sm shadow-[0_8px_18px_rgba(5,27,38,0.16)] focus:outline-none"
         :style="{
           aspectRatio: photo.ratio,
           flex: `${photo.ratio} 1 ${photo.ratio * 14}rem`,
@@ -199,13 +211,17 @@ onUnmounted(() => {
         />
       </div>
     </Teleport>
-  </div>
+  </section>
 </template>
 
 <style scoped>
 .photo-vignette {
   background:
-    radial-gradient(circle at center, transparent 38%, rgba(0, 0, 0, 0.52) 100%),
+    radial-gradient(
+      circle at center,
+      transparent 38%,
+      rgba(0, 0, 0, 0.52) 100%
+    ),
     linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14));
 }
 </style>

@@ -80,60 +80,71 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- ABOUT PANEL -->
-  <div class="mx-auto max-w-5xl px-6">
+  <section class="mx-auto max-w-6xl px-6 py-24">
     <h1
       ref="h1Ref"
       :class="[
-        'roboto-condensed thick flex w-full flex-row justify-center pt-30 pb-10 text-center text-5xl font-bold whitespace-nowrap text-gray-800 transition-all duration-1000 ease-out lg:text-7xl',
+        'roboto-condensed thick flex w-full flex-row justify-center pb-10 text-center text-5xl font-bold whitespace-nowrap text-slate-950 transition-all duration-1000 ease-out lg:text-7xl',
         h1Visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0',
       ]"
     >
-      ABOUT ME
+      ABOUT
     </h1>
-    <div
-      class="flex h-full w-full flex-col items-center justify-center lg:flex-row lg:items-center lg:justify-center"
-    >
+    <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
       <img
         ref="imgRef"
         src="../assets/profile2.JPG"
         alt="Profile"
         :class="[
-          'mb-5 h-[40vw] w-[40vw] rounded-lg object-cover shadow-xl transition-all delay-300 duration-1000 ease-out lg:mr-5 lg:mb-0 lg:ml-10 lg:h-80 lg:w-80',
+          'mx-auto aspect-square w-full max-w-sm rounded-lg object-cover shadow-xl transition-all delay-300 duration-1000 ease-out',
           imgVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0',
         ]"
       />
       <div
         ref="pRef"
         :class="[
-          'roboto-condensed thin text-md lg-h-100 mx-10 mb-10 w-[80vw] rounded-lg bg-white p-6 leading-relaxed text-gray-800 shadow-2xl transition-all delay-500 duration-1000 ease-out lg:mr-10 lg:mb-0 lg:ml-5 lg:w-160 lg:text-xl',
+          'roboto-condensed thin rounded-lg border border-slate-200 bg-white p-7 text-lg leading-relaxed text-slate-700 shadow-xl transition-all delay-500 duration-1000 ease-out lg:p-9 lg:text-xl',
           pVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0',
         ]"
       >
         <p>
-          Hey, I'm Bipon. I'm a 4th year Computer Science student at Western
-          University, and I'm currently working as a Software Engineer Intern at
-          Ontario Power Generation. I'm a tech enthusiast who loves to tinker
-          with coding projects, embeded systems, and automate every tedious or
-          repetitive task in my life.
+          Hey, I'm Bipon. I'm a fourth-year Computer Science student at Western
+          University who likes to tinker, automate everything, and turn loose
+          ideas into working products. I have been building across full-stack
+          web apps, scripts, embedded systems, and AI experiments while growing
+          through software engineering work at Ontario Power Generation.
         </p>
         <br />
         <p>
-          Learning is a big part of my life. I love solving problems and
-          challenging myself. Here are a few topics that are on my mind:
+          I grew up with photography as one of my favorite ways to pay attention
+          to the world. That creative side is still with me, and lately I have
+          been pushing into content creation and filmmaking so I can learn how
+          to tell better stories with motion, sound, pacing, and editing.
         </p>
-
-        <ul class="mt-2 mb-4 list-inside list-disc">
-          <li>Brain-Computer Interfaces</li>
-          <li>Humanoid Robots</li>
-          <li>Ethics of Artificial Intelligence</li>
-        </ul>
-
+        <br />
         <p>
-          Aside from coding, I have several hobbies which include playing
-          tennis, playing the guitar, biking, working out, and playing video
-          games.
+          Long term, I want to become a software developer who can contribute at
+          a fast-moving startup and one day at a major technology company. I
+          think AI is the future of how software gets built and used, and I want
+          to be close to that shift: learning the tools, asking good questions,
+          and building useful things with them.
         </p>
+        <div
+          class="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-slate-800"
+        >
+          <span class="rounded-md bg-teal-50 px-3 py-2 text-teal-800"
+            >Western University CS</span
+          >
+          <span class="rounded-md bg-amber-50 px-3 py-2 text-amber-800"
+            >Full-stack development</span
+          >
+          <span class="rounded-md bg-sky-50 px-3 py-2 text-sky-800"
+            >AI and automation</span
+          >
+          <span class="rounded-md bg-rose-50 px-3 py-2 text-rose-800"
+            >Photography and film</span
+          >
+        </div>
       </div>
     </div>
 
@@ -141,19 +152,19 @@ onUnmounted(() => {
     <div
       ref="iconsRef"
       :class="[
-        'flex flex-col items-center pt-5 transition-all delay-700 duration-1000 ease-out lg:pt-15',
+        'flex flex-col items-center pt-16 transition-all delay-700 duration-1000 ease-out',
         iconsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0',
       ]"
     >
       <h1
-        class="roboto-condensed thick text-center text-3xl font-bold text-gray-800 lg:text-4xl"
+        class="roboto-condensed thick text-center text-3xl font-bold text-slate-950 lg:text-4xl"
       >
         SOCIALS
       </h1>
       <div class="flex space-x-8 pt-5 lg:pt-10">
         <!-- LinkedIn -->
         <a
-          href="https://linkedin.com/in/biponroy47"
+          href="https://www.linkedin.com/in/biponroy/"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-700 transition-colors duration-300 hover:text-blue-600"
@@ -194,5 +205,5 @@ onUnmounted(() => {
         </a>
       </div>
     </div>
-  </div>
+  </section>
 </template>

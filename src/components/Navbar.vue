@@ -16,11 +16,11 @@ function scrollTo(id: string) {
 }
 
 const navLinks = [
-  { name: "ABOUT ME", id: "about" },
+  { name: "ABOUT", id: "about" },
   { name: "EXPERIENCE", id: "experience" },
   { name: "SOFTWARE", id: "software" },
-  { name: "PHOTOGRAPHY", id: "photography" },
-  { name: "FILMMAKING", id: "filmmaking" },
+  { name: "PHOTO", id: "photography" },
+  { name: "FILM", id: "filmmaking" },
   { name: "BLOG", id: "blog" },
 ];
 
@@ -42,16 +42,16 @@ onUnmounted(() => {
 <template>
   <nav
     :class="[
-      'fixed top-0 left-0 z-100 w-[100vw] px-6 py-4 backdrop-blur-2xl transition-all duration-500 ease-in-out',
+      'fixed top-0 left-0 z-[100] w-full px-6 py-4 backdrop-blur-2xl transition-all duration-500 ease-in-out',
       scrolled
         ? 'bg-tiber/95 shadow-[0_1px_16px_1px_rgba(0,0,0,0.75)]'
         : 'shadow-[0_8px_32px_4px_rgba(0,0,0,0.75)]',
     ]"
   >
-    <div class="flex flex-col lg:flex-row lg:items-center">
+    <div class="mx-auto flex max-w-7xl flex-col lg:flex-row lg:items-center">
       <div class="flex items-center justify-between">
         <div
-          class="roboto-condensed transform cursor-pointer text-4xl text-white transition-transform duration-200 hover:scale-110"
+          class="roboto-condensed transform cursor-pointer text-4xl text-white transition-transform duration-200 hover:scale-105"
           @click="scrollToTop"
         >
           BIPON
@@ -81,7 +81,7 @@ onUnmounted(() => {
             v-for="link in navLinks"
             :key="link.id"
             href="javascript:void(0)"
-            class="roboto-condensed my-5 inline-block transform cursor-pointer rounded-sm bg-transparent text-lg font-medium text-white transition-all duration-200 hover:scale-110 lg:my-0 lg:mt-0 lg:p-2"
+            class="roboto-condensed my-4 inline-block transform cursor-pointer rounded-sm bg-transparent text-lg font-medium text-white transition-all duration-200 hover:-translate-y-0.5 hover:text-teal-100 lg:my-0 lg:mt-0 lg:p-2"
             @click="scrollTo(link.id)"
           >
             {{ link.name }}

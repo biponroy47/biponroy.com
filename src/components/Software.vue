@@ -1,5 +1,17 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import {
+  BanknotesIcon,
+  BeakerIcon,
+  BoltIcon,
+  CodeBracketSquareIcon,
+  CommandLineIcon,
+  CpuChipIcon,
+  DocumentChartBarIcon,
+  PhotoIcon,
+  RectangleGroupIcon,
+  WrenchScrewdriverIcon,
+} from "@heroicons/vue/24/outline";
 
 const gridRef = ref(null);
 const gridVisible = ref(false);
@@ -7,68 +19,84 @@ let gridObserver;
 
 const projects = [
   {
-    name: "Project Name",
-    icon: "https://placehold.co/80x80?text=P1",
-    tech: "Python, Flask, PostgreSQL",
-    repo: "https://github.com/biponroy47",
+    name: "Finance Tracker",
+    icon: BanknotesIcon,
+    tech: "HTML, PWA, Google Cloud Functions",
+    repo: "https://github.com/biponroy47/finance_tracker",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A personal expense-tracking PWA that automates logging transactions into Google Sheets.",
   },
   {
-    name: "Project Name",
-    icon: "https://placehold.co/80x80?text=P2",
-    tech: "React, TypeScript, Node.js",
-    repo: "https://github.com/biponroy47",
+    name: "TechTO Hackathon",
+    icon: BoltIcon,
+    tech: "TypeScript, product prototyping",
+    repo: "https://github.com/biponroy47/techto_hackathon",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A hackathon build focused on moving quickly from idea to working TypeScript prototype.",
   },
   {
-    name: "Project Name",
-    icon: "https://placehold.co/80x80?text=P3",
-    tech: "Vue.js, Tailwind CSS, Vite",
-    repo: "https://github.com/biponroy47",
+    name: "biponroy.com",
+    icon: RectangleGroupIcon,
+    tech: "Vue, Tailwind CSS, Vite",
+    repo: "https://github.com/biponroy47/biponroy.com",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "This portfolio site, built to connect software work with photography, writing, and film.",
   },
   {
-    name: "Project Name",
-    icon: "https://placehold.co/80x80?text=P4",
-    tech: "C++, Arduino, Embedded Systems",
-    repo: "https://github.com/biponroy47",
+    name: "Resume",
+    icon: DocumentChartBarIcon,
+    tech: "LaTeX, career documentation",
+    repo: "https://github.com/biponroy47/resume",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A version-controlled LaTeX resume workflow for keeping career materials tidy and repeatable.",
   },
   {
-    name: "Project Name",
-    icon: "https://placehold.co/80x80?text=P5",
-    tech: "Java, Spring Boot, MySQL",
-    repo: "https://github.com/biponroy47",
+    name: "Invoice Automator",
+    icon: WrenchScrewdriverIcon,
+    tech: "Python, CSV, PDF processing",
+    repo: "https://github.com/biponroy47/invoice_automator",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A utility that turns monthly invoice documents into a clean summary CSV.",
   },
   {
-    name: "Project Name",
-    icon: "https://placehold.co/80x80?text=P6",
-    tech: "Swift, SwiftUI, CoreData",
-    repo: "https://github.com/biponroy47",
+    name: "Image Finder",
+    icon: PhotoIcon,
+    tech: "Python, file automation",
+    repo: "https://github.com/biponroy47/image_finder_and_copier",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A script for finding and extracting images from messy folders when manual sorting gets painful.",
   },
   {
-    name: "Project Name",
-    icon: "https://placehold.co/80x80?text=P7",
-    tech: "Kotlin, Jetpack Compose, Firebase",
-    repo: "https://github.com/biponroy47",
+    name: "Arduino Car",
+    icon: CpuChipIcon,
+    tech: "C++, Arduino, embedded systems",
+    repo: "https://github.com/biponroy47/arduino_car",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A custom 4WD electronic car using Arduino, motor driver chips, and IR controls.",
   },
   {
-    name: "Project Name",
-    icon: "https://placehold.co/80x80?text=P8",
-    tech: "Rust, WebAssembly, WASM",
-    repo: "https://github.com/biponroy47",
+    name: "TensorFlow Teachable Machine",
+    icon: BeakerIcon,
+    tech: "JavaScript, TensorFlow, MobileNet",
+    repo: "https://github.com/biponroy47/tensorflow_teachable_machine",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "An object-detection experiment using TensorFlow and MobileNet as a practical AI learning project.",
+  },
+  {
+    name: "Full Stack Open",
+    icon: CommandLineIcon,
+    tech: "React, Node, Express, MongoDB",
+    repo: "https://github.com/biponroy47/full_stack_open",
+    description:
+      "Course projects from the University of Helsinki's full-stack web development curriculum.",
+  },
+  {
+    name: "Cipher Encryption",
+    icon: CodeBracketSquareIcon,
+    tech: "Java, SWT, algorithms",
+    repo: "https://github.com/biponroy47/cipher_encryption",
+    description:
+      "A desktop encryption/decryption tool for substitution and Caesar cipher algorithms.",
   },
 ];
 
@@ -94,17 +122,29 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="bg-tiber/5 min-h-screen w-screen py-10">
+  <section class="bg-tiber/5 w-full py-24">
     <div class="mx-auto max-w-7xl px-6">
+      <p
+        class="roboto-condensed thick text-center text-sm tracking-[0.18em] text-teal-700 uppercase"
+      >
+        Public GitHub work
+      </p>
       <h1
-        class="roboto-condensed thick flex w-full flex-row justify-center pt-30 pb-10 text-center text-5xl font-bold text-gray-800 lg:text-7xl"
+        class="roboto-condensed thick flex w-full flex-row justify-center pt-3 pb-6 text-center text-5xl font-bold text-slate-950 lg:text-7xl"
       >
         SOFTWARE
       </h1>
+      <p
+        class="mx-auto mb-12 max-w-3xl text-center text-lg leading-8 text-slate-600"
+      >
+        I like projects that remove friction: personal automations, full-stack
+        apps, embedded experiments, and early AI prototypes. These are selected
+        from my public repositories.
+      </p>
       <div
         ref="gridRef"
         :class="[
-          'grid grid-cols-1 gap-12 transition-all duration-1000 ease-out sm:grid-cols-2 lg:grid-cols-4',
+          'grid grid-cols-1 gap-5 transition-all duration-1000 ease-out sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5',
           gridVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0',
         ]"
       >
@@ -114,24 +154,27 @@ onUnmounted(() => {
           :href="project.repo"
           target="_blank"
           rel="noopener noreferrer"
-          class="roboto-condensed flex flex-col items-center rounded-xl bg-white p-6 shadow-2xl transition-transform duration-300 hover:scale-105"
+          class="roboto-condensed group flex min-h-80 flex-col rounded-lg border border-slate-200 bg-white p-6 shadow-lg transition duration-300 hover:-translate-y-1 hover:border-teal-300 hover:shadow-2xl"
         >
-          <img
-            :src="project.icon"
-            :alt="project.name"
-            class="mb-4 h-28 w-28 rounded-2xl object-contain shadow-md"
-          />
-          <h2 class="thick mb-2 text-xl font-bold text-gray-800">
+          <div
+            class="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-slate-950 text-teal-100 shadow-md transition group-hover:bg-teal-700"
+          >
+            <component :is="project.icon" class="h-8 w-8" aria-hidden="true" />
+          </div>
+          <h2 class="thick mb-2 text-xl font-bold text-slate-950">
             {{ project.name }}
           </h2>
-          <p class="thin mb-3 text-center text-sm text-gray-500">
+          <p class="thin mb-3 text-sm text-teal-700">
             {{ project.tech }}
           </p>
-          <p class="thin text-center text-base leading-relaxed text-gray-700">
+          <p class="thin text-base leading-relaxed text-slate-600">
             {{ project.description }}
           </p>
+          <span class="mt-auto pt-5 text-sm font-semibold text-slate-950">
+            View repository
+          </span>
         </a>
       </div>
     </div>
-  </div>
+  </section>
 </template>

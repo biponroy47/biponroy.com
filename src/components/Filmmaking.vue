@@ -1,24 +1,38 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import {
+  FilmIcon,
+  PlayCircleIcon,
+  ScissorsIcon,
+  SparklesIcon,
+} from "@heroicons/vue/24/outline";
 
 const sectionRef = ref(null);
 const sectionVisible = ref(false);
 let sectionObserver;
+const filmBackground = new URL("../assets/profile1.JPG", import.meta.url).href;
 
-// Replace with your YouTube channel ID (starts with UC...)
-// Your uploads playlist is the same ID but starts with UU instead of UC
-const CHANNEL_HANDLE = "BiponRoy";
-const UPLOADS_PLAYLIST_ID = "UU_REPLACE_WITH_YOUR_CHANNEL_ID";
-
-// Placeholder video IDs — replace these with your actual YouTube video IDs
-// Once you set the uploads playlist ID above, you can remove the individual videos
-const videos = [
-  "dQw4w9WgXcQ",
-  "dQw4w9WgXcQ",
-  "dQw4w9WgXcQ",
-  "dQw4w9WgXcQ",
-  "dQw4w9WgXcQ",
-  "dQw4w9WgXcQ",
+const focusAreas = [
+  {
+    icon: FilmIcon,
+    title: "Filmmaking",
+    text: "Learning how to shape moments with framing, pacing, music, and edits that feel intentional.",
+  },
+  {
+    icon: PlayCircleIcon,
+    title: "Content creation",
+    text: "Experimenting with short-form and long-form ideas that connect technology, lifestyle, and creative work.",
+  },
+  {
+    icon: ScissorsIcon,
+    title: "Editing craft",
+    text: "Practicing the invisible parts of storytelling: selecting the right shot, cutting at the right beat, and keeping the viewer with me.",
+  },
+  {
+    icon: SparklesIcon,
+    title: "AI-assisted creativity",
+    text: "Exploring how AI can speed up research, planning, scripting, and post-production while keeping the final taste human.",
+  },
 ];
 
 onMounted(() => {
@@ -43,63 +57,78 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="mx-auto max-w-7xl px-6">
-    <h1
-      class="roboto-condensed thick flex w-full flex-row justify-center pt-30 pb-10 text-center text-5xl font-bold text-gray-800 lg:text-7xl"
-    >
-      FILMMAKING
-    </h1>
+  <section class="bg-slate-950 px-6 py-24 text-white">
+    <div class="mx-auto max-w-7xl">
+      <p
+        class="roboto-condensed thick text-sm tracking-[0.18em] text-teal-200 uppercase"
+      >
+        Creative direction
+      </p>
+      <h1 class="roboto-condensed thick mt-3 text-5xl font-bold lg:text-7xl">
+        FILMMAKING
+      </h1>
 
-    <div
-      ref="sectionRef"
-      :class="[
-        'transition-all duration-1000 ease-out',
-        sectionVisible
-          ? 'translate-y-0 opacity-100'
-          : 'translate-y-8 opacity-0',
-      ]"
-    >
-      <!-- Featured: Full channel uploads playlist embed -->
-      <div class="mb-12 flex justify-center">
-        <iframe
-          class="aspect-video w-full max-w-4xl rounded-xl shadow-2xl"
-          :src="`https://www.youtube.com/embed/videoseries?list=${UPLOADS_PLAYLIST_ID}`"
-          title="YouTube Uploads Playlist"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      <!-- Grid of individual video embeds -->
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        ref="sectionRef"
+        :class="[
+          'mt-10 grid gap-8 transition-all duration-1000 ease-out lg:grid-cols-[0.95fr_1.05fr]',
+          sectionVisible
+            ? 'translate-y-0 opacity-100'
+            : 'translate-y-8 opacity-0',
+        ]"
+      >
         <div
-          v-for="(videoId, index) in videos"
-          :key="index"
-          class="overflow-hidden rounded-xl shadow-2xl transition-transform duration-300 hover:scale-105"
+          class="flex min-h-96 flex-col justify-end rounded-lg bg-cover bg-center p-8 shadow-2xl"
+          :style="{
+            backgroundImage: `linear-gradient(rgba(5,27,38,0.1), rgba(5,27,38,0.92)), url(${filmBackground})`,
+          }"
         >
-          <iframe
-            class="aspect-video w-full"
-            :src="`https://www.youtube.com/embed/${videoId}`"
-            :title="`Video ${index + 1}`"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+          <p class="max-w-xl text-2xl leading-9 font-semibold">
+            Photography taught me to notice. Film is teaching me how to hold
+            attention.
+          </p>
+          <p class="mt-4 max-w-xl text-slate-200">
+            I am building the habit of creating, publishing, reviewing, and
+            improving. The goal is not just better videos; it is becoming a
+            stronger storyteller.
+          </p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <article
+            v-for="area in focusAreas"
+            :key="area.title"
+            class="rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:-translate-y-1 hover:bg-white/10"
+          >
+            <component
+              :is="area.icon"
+              class="h-9 w-9 text-teal-200"
+              aria-hidden="true"
+            />
+            <h2 class="mt-5 text-2xl font-bold">{{ area.title }}</h2>
+            <p class="mt-3 leading-7 text-slate-300">{{ area.text }}</p>
+          </article>
         </div>
       </div>
 
-      <!-- Subscribe button -->
-      <div class="mt-12 flex justify-center">
+      <div class="mt-10 flex flex-col gap-3 sm:flex-row">
         <a
-          :href="`https://www.youtube.com/@${CHANNEL_HANDLE}?sub_confirmation=1`"
+          href="https://www.youtube.com/@BiponRoy"
           target="_blank"
           rel="noopener noreferrer"
-          class="roboto-condensed thick rounded-lg bg-red-600 px-8 py-4 text-xl font-semibold text-white shadow-lg transition hover:scale-105 hover:bg-red-700"
+          class="roboto-condensed thick inline-flex items-center justify-center rounded-lg bg-white px-6 py-4 text-lg font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-teal-50"
         >
-          SUBSCRIBE ON YOUTUBE
+          YOUTUBE
+        </a>
+        <a
+          href="https://beeps-photography.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="roboto-condensed thick inline-flex items-center justify-center rounded-lg border border-white/25 px-6 py-4 text-lg font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          PHOTO ARCHIVE
         </a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
