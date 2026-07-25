@@ -21,7 +21,6 @@ const navLinks = [
   { name: "SOFTWARE", id: "software" },
   { name: "PHOTO", id: "photography" },
   { name: "FILM", id: "filmmaking" },
-  { name: "BLOG", id: "blog" },
 ];
 
 // Track scroll position

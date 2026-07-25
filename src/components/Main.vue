@@ -1,13 +1,10 @@
 <template>
   <section class="relative min-h-screen overflow-hidden bg-slate-950 shadow-xl">
-    <div class="absolute inset-0">
-      <img
-        src="../assets/background.png"
-        alt="Abstract dark portfolio background"
-        class="h-full w-full object-cover opacity-75"
-      />
+    <div
+      class="absolute inset-0 bg-[linear-gradient(120deg,#051b26_0%,#0f172a_48%,#111827_100%)]"
+    >
       <div
-        class="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,27,38,0.92),rgba(5,27,38,0.58),rgba(15,23,42,0.78))]"
+        class="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,27,38,0.9),rgba(5,27,38,0.48),rgba(15,23,42,0.76))]"
       ></div>
     </div>
 
@@ -26,7 +23,7 @@
       <p
         class="roboto-condensed thick text-sm tracking-[0.28em] text-teal-200 uppercase"
       >
-        CS student · builder · visual storyteller
+        Software developer · tech enthusiast · visual storyteller
       </p>
       <h1
         class="roboto-condensed thick mt-5 max-w-5xl text-7xl leading-[0.9] text-white text-shadow-lg sm:text-8xl lg:text-9xl"
@@ -34,10 +31,14 @@
         BIPON ROY
       </h1>
       <p class="mt-6 max-w-3xl text-xl leading-8 text-slate-100 lg:text-2xl">
-        I build software, automate the boring stuff, and tell stories through
-        photos and film. I am studying computer science at Western University
-        and chasing the kind of career where curiosity turns into useful
-        products.
+        Hi, I'm Bipon. I'm a Computer Science student at Western University
+        working toward becoming the kind of software developer who builds
+        useful products, moves fast, and keeps learning. I love AI, automation,
+        startups, and telling stories through photos and film.
+      </p>
+      <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-200">
+        I am excited by the idea of joining a tech startup, helping build at a
+        big tech company, or founding something of my own one day.
       </p>
       <div class="mt-9 flex flex-col gap-3 sm:flex-row">
         <button
@@ -53,6 +54,14 @@
           class="roboto-condensed thick inline-flex items-center justify-center rounded-lg border border-white/35 px-6 py-4 text-lg font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
         >
           GITHUB PROJECTS
+        </a>
+        <a
+          href="https://github.com/biponroy47/resume/blob/main/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="roboto-condensed thick inline-flex items-center justify-center rounded-lg border border-white/35 px-6 py-4 text-lg font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          VIEW RESUME
         </a>
       </div>
     </div>

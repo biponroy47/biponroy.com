@@ -7,9 +7,7 @@ import {
   CodeBracketSquareIcon,
   CommandLineIcon,
   CpuChipIcon,
-  DocumentChartBarIcon,
   PhotoIcon,
-  RectangleGroupIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/vue/24/outline";
 
@@ -27,28 +25,12 @@ const projects = [
       "A personal expense-tracking PWA that automates logging transactions into Google Sheets.",
   },
   {
-    name: "TechTO Hackathon",
+    name: "FiHo",
     icon: BoltIcon,
-    tech: "TypeScript, product prototyping",
+    tech: "TypeScript, AI, financial dashboard",
     repo: "https://github.com/biponroy47/techto_hackathon",
     description:
-      "A hackathon build focused on moving quickly from idea to working TypeScript prototype.",
-  },
-  {
-    name: "biponroy.com",
-    icon: RectangleGroupIcon,
-    tech: "Vue, Tailwind CSS, Vite",
-    repo: "https://github.com/biponroy47/biponroy.com",
-    description:
-      "This portfolio site, built to connect software work with photography, writing, and film.",
-  },
-  {
-    name: "Resume",
-    icon: DocumentChartBarIcon,
-    tech: "LaTeX, career documentation",
-    repo: "https://github.com/biponroy47/resume",
-    description:
-      "A version-controlled LaTeX resume workflow for keeping career materials tidy and repeatable.",
+      "An AI-powered financial assistant and dashboard built for Tangerine's financial AI track, helping users track net worth, manage budgets, plan expenses, and get goal-based guidance.",
   },
   {
     name: "Invoice Automator",
@@ -97,6 +79,113 @@ const projects = [
     repo: "https://github.com/biponroy47/cipher_encryption",
     description:
       "A desktop encryption/decryption tool for substitution and Caesar cipher algorithms.",
+  },
+];
+
+const tools = [
+  {
+    name: "ChatGPT",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+  },
+  {
+    name: "Codex",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg",
+  },
+  {
+    name: "Claude Code",
+    icon: "https://cdn.simpleicons.org/anthropic/111827",
+  },
+  {
+    name: "Figma",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  },
+  {
+    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "HTML5",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "CSS3",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+  {
+    name: "C++",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+  },
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "Express.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  },
+  {
+    name: "TensorFlow",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+  },
+  {
+    name: "OpenCV",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg",
+  },
+  {
+    name: "Docker",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    name: "MongoDB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    name: "Supabase",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
+  },
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "VS Code",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  },
+  {
+    name: "NPM",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
+  },
+  {
+    name: "Bash",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+  },
+  {
+    name: "ESLint",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg",
+  },
+  {
+    name: "Postman",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+  },
+  {
+    name: "Three.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
   },
 ];
 
@@ -174,6 +263,48 @@ onUnmounted(() => {
             View repository
           </span>
         </a>
+      </div>
+
+      <div
+        class="mt-16 rounded-lg border border-slate-200 bg-white p-6 shadow-lg"
+      >
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p
+              class="roboto-condensed thick text-sm tracking-[0.18em] text-teal-700 uppercase"
+            >
+              Technical toolkit
+            </p>
+            <h2
+              class="roboto-condensed thick mt-2 text-4xl font-bold text-slate-950"
+            >
+              TOOLS I USE
+            </h2>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-5">
+          <span
+            v-for="tool in tools"
+            :key="tool.name"
+            :aria-label="tool.name"
+            :title="tool.name"
+            class="group relative flex h-12 w-12 items-center justify-center transition hover:-translate-y-0.5"
+          >
+            <img
+              :src="tool.icon"
+              :alt="tool.name"
+              loading="lazy"
+              decoding="async"
+              class="max-h-10 max-w-10 object-contain transition drop-shadow-sm group-hover:scale-110"
+            />
+            <span
+              class="pointer-events-none absolute bottom-full left-1/2 mb-3 -translate-x-1/2 translate-y-1 rounded-md bg-slate-950 px-2.5 py-1.5 text-xs font-semibold whitespace-nowrap text-white opacity-0 shadow-lg transition group-hover:translate-y-0 group-hover:opacity-100"
+            >
+              {{ tool.name }}
+            </span>
+          </span>
+        </div>
       </div>
     </div>
   </section>

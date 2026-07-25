@@ -93,7 +93,7 @@ onUnmounted(() => {
     <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
       <img
         ref="imgRef"
-        src="../assets/profile2.JPG"
+        src="../assets/profile2-enhanced.JPG"
         alt="Profile"
         :class="[
           'mx-auto aspect-square w-full max-w-sm rounded-lg object-cover shadow-xl transition-all delay-300 duration-1000 ease-out',
@@ -123,11 +123,14 @@ onUnmounted(() => {
         </p>
         <br />
         <p>
-          Long term, I want to become a software developer who can contribute at
-          a fast-moving startup and one day at a major technology company. I
-          think AI is the future of how software gets built and used, and I want
-          to be close to that shift: learning the tools, asking good questions,
-          and building useful things with them.
+          Right now, I am focused on getting as much hands-on software
+          development experience as I can. I would love to join a fast-moving
+          startup where I can take ownership and help ship real products, work
+          at a major technology company with people building at huge scale, or
+          eventually found my own tech company. I think AI is going to change
+          how people work, learn, build, and solve problems, and I want to be
+          close to that shift: testing the tools, asking better questions, and
+          using them to build things that feel genuinely useful.
         </p>
         <div
           class="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-slate-800"
