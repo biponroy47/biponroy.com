@@ -1,10 +1,13 @@
 <template>
   <section class="relative min-h-screen overflow-hidden bg-slate-950 shadow-xl">
-    <div
-      class="absolute inset-0 bg-[linear-gradient(120deg,#051b26_0%,#0f172a_48%,#111827_100%)]"
-    >
+    <div class="absolute inset-0">
+      <img
+        src="../assets/background.png"
+        alt="CN Tower skyline background"
+        class="h-full w-full object-cover opacity-75"
+      />
       <div
-        class="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,27,38,0.9),rgba(5,27,38,0.48),rgba(15,23,42,0.76))]"
+        class="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,27,38,0.92),rgba(5,27,38,0.58),rgba(15,23,42,0.78))]"
       ></div>
     </div>
 
